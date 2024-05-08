@@ -1,0 +1,91 @@
+```
+houi_wheel.ahk
+from @houi
+
+This is a wheeler script, to easily wheel any combinations automaticly (with a little tweaking) although it only works with one character on the screen, should work in both fullscreen and windowed.
+To use it play as jester and press the key combinations of the desied effect.
+Do NOT press any other buttons while its rolling, unless you want to cancel the roll.
+DO NOT HOLD THE BUTTONS, this seems to bug out the script and roll a wrong combination.
+
+If the script does not work, try changing the color codes of the icons.
+1. just get the color codes with the "get_info.ahk" script as described below. 
+2. open the script in your text editor of choice.
+3. in the top of the script change the color codes to what you collected in step 1, the color codes in the script looks like this:
+;eternia crystal
+e_c := 0x05DDFF
+;goblin 
+gob := 0x242800
+;sword
+swo := 0x72C1E2
+;potion
+pot := 0xB90000
+;manatoken
+man := 0x060030
+
+
+With no tweaking the active combinations are:
+ctrl + f   %dmg all enemies (sword sword sword)
+ctrl + t   %heal all alies (potion potion potion)
+If you want to use the other combinations, open the code in your text editor of choice and follow the instructions in the big blob of text, starting on line 33.
+
+Tested on
+windows operating system
+fullscreen (1920x1080)
+windowed (all sizes in the dungeon defenders settings)
+```
+
+
+
+```
+houi_wheel_splitscreen.ahk
+from @houi
+
+This is a wheeler script, to easily wheel any combinations automaticly (with a little tweaking), should work in both fullscreen and windowed.
+to use it start the script whith only one character in the game. ONLY leave and join using the f2-f8 play as jester on the current active player and press the key combinations of the desied effect.
+DO NOT PRESS f2-f8 while in a menu or during any other activity that cancels the ingame action of that buttonpress, like a loading screen, this will mess up the script since it tracks the f2-f8 buttons, and you will either have to restart it, or use f7 to leave with all characters.
+DO NOT press any other buttons while its rolling, unless you want to cancel the roll.
+DO NOT HOLD THE BUTTONS, this seems to bug out the script and roll a wrong combination.
+
+If the script does not work, try changing the color codes of the icons.
+1. just get the color codes with the "get_info.ahk" script as described below. 
+2. open the script in your text editor of choice.
+3. in the top of the script change the color codes to what you collected in step 1, the color codes in the script looks like this:
+;eternia crystal
+e_c := 0x05DDFF
+;goblin 
+gob := 0x242800
+;sword
+swo := 0x72C1E2
+;potion
+pot := 0xB90000
+;manatoken
+man := 0x060030
+4. save the file
+5. reload the script
+6. test it!
+
+
+With no tweaking the active combinations are:
+ctrl + f   %dmg all enemies (sword sword sword)
+ctrl + t   %heal all alies (potion potion potion)
+if you want to use the other combinations, open the code in your text editor of choice and follow the instructions in the big blob of text, starting on line 33.
+
+tested on
+windows operating system
+fullscreen (1920x1080) (1-4 characters active)
+windowed (1908x1011, 640x480) (1-4 characters active)
+```
+
+
+
+```
+get_info.ahk
+from @houi
+
+This script is for showing the color code for the pixel the mouse is currently pointing at, and x and y coordinates of that pixel.
+This can be used to correct the color codes in the other scripts if they dont work just:
+1. start a wheel and roll an icon, do not finnish the wheel.
+2. take a screen shot of the icon.
+3. hower the mouse over a distinct color of the image.
+4. grab the color code.
+```
